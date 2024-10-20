@@ -30,8 +30,8 @@ def generate_recipe():
         # Generate the recipe using the Gemini API
         model = genai.GenerativeModel("gemini-1.5-flash")
         response = model.generate_content(
-            f'Give a list of ingredients and nutritional information for {dish_name} to serve {serving_number} people. '
-            'Give the nutritional information in a dictionary format consisting of the keys being a macronutrient and the value being the quantity (don't format as a range). Format like this: python { "calories": 400, "protein": 30 grams, "carbohydrates": 30-40 grams, "fat": 15-20 grams, "saturated fat": 3 grams, "cholesterol": 80 mg, "sodium": 1000 mg, } '
+            f'Give a list of ingredients and nutritional information for {dish_name} to serve {serving_number} people.'
+            'Give the nutritional information in a dictionary format consisting of the keys being a macronutrient and the value being the quantity (don't format as a range). Format like this: python { "calories": 400, "protein": 30 grams, "carbohydrates": 30 grams, "fat": 15 grams, "saturated fat": 3 grams, "cholesterol": 80 mg, "sodium": 1000 mg, }'
             'Also, please format the ingredients as a string and include the quantities.'
         )
         
