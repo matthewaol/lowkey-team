@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly Meal Planner</h1>
+        <form id="meal-plan-form">
+            <div id="meal-plan">
+                <div class="meal-item">
+                    <input type="text" name="dish[]" placeholder="Dish Name" required />
+                    <input type="number" name="servings[]" placeholder="Serving Amount" required />
+                </div>
+            </div>
+            <button type="button" id="add-dish">Add Dish</button>
+            <button type="submit">Generate Shopping List</button>
+        </form>
+        <div id="shopping-list"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
